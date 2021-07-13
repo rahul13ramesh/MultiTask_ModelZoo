@@ -1,0 +1,91 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/rahul/Documents/acads/research/2021/boosting/MultitTask_ModelZoo/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+BasicBlock	net/wideresnet.py	/^class BasicBlock(nn.Module):$/;"	c
+Cifar100Handler	datasets/cifar.py	/^class Cifar100Handler(MultiTaskDataHandler):$/;"	c
+Cifar10Handler	datasets/cifar.py	/^class Cifar10Handler(MultiTaskDataHandler):$/;"	c
+F	net/wideresnet.py	/^import torch.nn.functional as F$/;"	I	nameref:module:torch.nn.functional
+Logger	utils/logger.py	/^class Logger():$/;"	c
+ModMNIST	datasets/modmnist.py	/^class ModMNIST(torchvision.datasets.MNIST):$/;"	c
+ModelZoo	modelzoo.py	/^class ModelZoo():$/;"	c
+MultiHead	multihead.py	/^class MultiHead():$/;"	c
+MultiTaskDataHandler	datasets/data.py	/^class MultiTaskDataHandler():$/;"	c
+MultitTask_ModelZoo	README.md	/^# MultitTask_ModelZoo$/;"	c
+NetworkBlock	net/wideresnet.py	/^class NetworkBlock(nn.Module):$/;"	c
+PermutedMNISTHandler	datasets/mnist.py	/^class PermutedMNISTHandler(MultiTaskDataHandler):$/;"	c
+RotatedMNISTHandler	datasets/mnist.py	/^class RotatedMNISTHandler(MultiTaskDataHandler):$/;"	c
+Setup:	README.md	/^## Setup:$/;"	s	chapter:MultitTask_ModelZoo
+SplitMNISTHandler	datasets/mnist.py	/^class SplitMNISTHandler(MultiTaskDataHandler):$/;"	c
+WideResNetMultiTask	net/wideresnet.py	/^class WideResNetMultiTask(nn.Module):$/;"	c
+WideResNetMultiTask_v2	net/wideresnet.py	/^class WideResNetMultiTask_v2(nn.Module):$/;"	c
+__getitem__	datasets/modmnist.py	/^    def __getitem__(self, index: int) -> Tuple[Any, Any]:$/;"	m	class:ModMNIST	typeref:typename:Tuple[Any,Any]
+__init__	datasets/cifar.py	/^    def __init__(self,$/;"	m	class:Cifar100Handler	typeref:typename:None
+__init__	datasets/cifar.py	/^    def __init__(self,$/;"	m	class:Cifar10Handler	typeref:typename:None
+__init__	datasets/data.py	/^    def __init__(self) -> None:$/;"	m	class:MultiTaskDataHandler	typeref:typename:None
+__init__	datasets/mnist.py	/^    def __init__(self,$/;"	m	class:PermutedMNISTHandler	typeref:typename:None
+__init__	datasets/mnist.py	/^    def __init__(self,$/;"	m	class:RotatedMNISTHandler	typeref:typename:None
+__init__	datasets/mnist.py	/^    def __init__(self,$/;"	m	class:SplitMNISTHandler	typeref:typename:None
+__init__	modelzoo.py	/^    def __init__(self, args, data_conf, hp_conf):$/;"	m	class:ModelZoo
+__init__	multihead.py	/^    def __init__(self, args, hp, data_conf):$/;"	m	class:MultiHead
+__init__	net/wideresnet.py	/^    def __init__(self,$/;"	m	class:BasicBlock	typeref:typename:None
+__init__	net/wideresnet.py	/^    def __init__(self,$/;"	m	class:NetworkBlock	typeref:typename:None
+__init__	net/wideresnet.py	/^    def __init__(self,$/;"	m	class:WideResNetMultiTask	typeref:typename:None
+__init__	net/wideresnet.py	/^    def __init__(self,$/;"	m	class:WideResNetMultiTask_v2	typeref:typename:None
+__init__	utils/logger.py	/^    def __init__(self, test_loaders, train_loaders,$/;"	m	class:Logger
+_make_layer	net/wideresnet.py	/^    def _make_layer(self,$/;"	m	class:NetworkBlock	typeref:typename:nn.Sequential
+add_learner	modelzoo.py	/^    def add_learner(self, learner_conf):$/;"	m	class:ModelZoo
+amp	hpo.py	/^import torch.cuda.amp as amp$/;"	I	nameref:module:torch.cuda.amp
+amp	multihead.py	/^import torch.cuda.amp as amp$/;"	I	nameref:module:torch.cuda.amp
+amp	utils/run_net.py	/^import torch.cuda.amp as amp$/;"	I	nameref:module:torch.cuda.amp
+evaluate	modelzoo.py	/^    def evaluate(self, rounds):$/;"	m	class:ModelZoo
+evaluate	utils/run_net.py	/^def evaluate(net, dataloader, gpu):$/;"	f
+evaluate_preds	modelzoo.py	/^    def evaluate_preds(self, preds, tr_flag):$/;"	m	class:ModelZoo
+evaluate_train	utils/logger.py	/^    def evaluate_train(self, net):$/;"	m	class:Logger
+fetch_configs	utils/config.py	/^def fetch_configs(fname):$/;"	f
+fetch_dataclass	datasets/build_dataset.py	/^def fetch_dataclass(dataset: str) -> MultiTaskDataHandler:$/;"	f	typeref:typename:MultiTaskDataHandler
+fetch_net	net/build_net.py	/^def fetch_net(args: Any,$/;"	f
+fetch_predictions	modelzoo.py	/^    def fetch_predictions(self, net, l_task_info, tr_flag=False):$/;"	m	class:ModelZoo
+forward	net/wideresnet.py	/^    def forward(self, x: Tensor) -> Tensor:$/;"	m	class:BasicBlock	typeref:typename:Tensor
+forward	net/wideresnet.py	/^    def forward(self, x: Tensor) -> Tensor:$/;"	m	class:NetworkBlock	typeref:typename:Tensor
+forward	net/wideresnet.py	/^    def forward(self,$/;"	m	class:WideResNetMultiTask	typeref:typename:Tensor
+forward	net/wideresnet.py	/^    def forward(self,$/;"	m	class:WideResNetMultiTask_v2	typeref:typename:Tensor
+get_data_loader	datasets/data.py	/^    def get_data_loader(self,$/;"	m	class:MultiTaskDataHandler	typeref:typename:DataLoader
+get_task_data_loader	datasets/data.py	/^    def get_task_data_loader(self,$/;"	m	class:MultiTaskDataHandler	typeref:typename:DataLoader
+log_metrics	utils/logger.py	/^    def log_metrics(self, net, train_met, ep):$/;"	m	class:Logger
+log_train	utils/logger.py	/^    def log_train(self, net, train_met, ep):$/;"	m	class:Logger
+main	hpo.py	/^def main():$/;"	f
+main	modelzoo.py	/^def main():$/;"	f
+main	multihead.py	/^def main():$/;"	f
+ng	hpo.py	/^import nevergrad as ng$/;"	I	nameref:module:nevergrad
+nn	modelzoo.py	/^import torch.nn as nn$/;"	I	nameref:module:torch.nn
+nn	net/wideresnet.py	/^import torch.nn as nn$/;"	I	nameref:module:torch.nn
+nn	utils/run_net.py	/^import torch.nn as nn$/;"	I	nameref:module:torch.nn
+np	datasets/cifar.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	datasets/data.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	datasets/mnist.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	hpo.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	modelzoo.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	multihead.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	utils/logger.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	utils/run_net.py	/^import numpy as np$/;"	I	nameref:module:numpy
+optim	hpo.py	/^import torch.optim as optim$/;"	I	nameref:module:torch.optim
+optim	multihead.py	/^import torch.optim as optim$/;"	I	nameref:module:torch.optim
+pd	hpo.py	/^import pandas as pd$/;"	I	nameref:module:pandas
+run_epoch	utils/run_net.py	/^def run_epoch(net, args, optimizer, train_loader,$/;"	f
+sample_tasks	modelzoo.py	/^    def sample_tasks(self, rounds):$/;"	m	class:ModelZoo
+train	modelzoo.py	/^    def train(self):$/;"	m	class:ModelZoo
+train	multihead.py	/^    def train(self, log_interval=5):$/;"	m	class:MultiHead
+train_model	hpo.py	/^def train_model(config, args, dataset_conf, ftune, seed):$/;"	f
+transforms	datasets/cifar.py	/^import torchvision.transforms as transforms$/;"	I	nameref:module:torchvision.transforms
+transforms	datasets/mnist.py	/^import torchvision.transforms as transforms$/;"	I	nameref:module:torchvision.transforms
+tune_net	hpo.py	/^def tune_net(args, dataset_conf):$/;"	f
+update_wts	modelzoo.py	/^    def update_wts(self, losses):$/;"	m	class:ModelZoo
+wif	datasets/data.py	/^def wif(id):$/;"	f

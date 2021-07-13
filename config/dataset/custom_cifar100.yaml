@@ -1,0 +1,6 @@
+
+# [Flowers, Electrical Devices, Natural Outdoor, Small Mammals, Vehicles 1]
+dataset: "cifar100"
+tasks: [[54, 62, 70, 82, 92], [22, 39, 40, 86, 87],
+        [23, 33, 49, 60, 71], [36, 50, 65, 74, 80],
+        [8, 13, 48, 58, 90]]

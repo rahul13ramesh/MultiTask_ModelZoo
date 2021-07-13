@@ -1,0 +1,5 @@
+# ['Fish', 'Electrical Devices', 'Natural Outdoor', 'Omni-Herbivores', 'Small Mammals']
+dataset: "cifar100"
+tasks: [[1, 32, 67, 73, 91], [22, 39, 40, 86, 87],
+        [23, 33, 49, 60, 71], [15, 19, 21, 31, 38],
+        [36, 50, 65, 74, 80]]
