@@ -69,7 +69,6 @@ class ModelZoo():
         return losses
 
     def sample_tasks(self, rounds):
-        pr = self.wts / np.sum(self.wts)
         # Randomize here so that every iteration has a different set of tasks
         # The random seed is fixed in 'train_model' in order to ensure that the
         # same dataset is sampled in every round.
@@ -77,23 +76,25 @@ class ModelZoo():
 
         if self.args.continual:
             # Number of tasks trained in the learner
-            numsubtasks = min(self.args.subtasks, rounds + 1)
+            numsubtasks = min(self.args.tasks_per_round, rounds + 1)
+            pr = self.wts[:rounds] / np.sum(self.wts[:rounds])
             if rounds != 0:
                 if self.args.naive:
-                    sub_task_idx = np.random.choice(rounds, numsubtasks - 1,
-                                                    replace=False)
+                    learner_task_idx = np.random.choice(rounds, numsubtasks - 1,
+                                                        replace=False)
                 else:
-                    sub_task_idx = np.random.choice(rounds, numsubtasks - 1,
-                                                    replace=False, p=pr)
+                    learner_task_idx = np.random.choice(rounds, numsubtasks - 1,
+                                                        replace=False, p=pr)
             else:
-                sub_task_idx = np.array([])
+                learner_task_idx = np.array([])
 
             # Manually add the newly seen task (although boosting-based version
             # automatically selects this task due to the the very large loss)
-            sub_task_idx = np.append(sub_task_idx, int(rounds))
-            sub_task_idx = np.array(sub_task_idx, dtype=np.int32)
+            learner_task_idx = np.append(learner_task_idx, int(rounds))
+            learner_task_idx = np.array(learner_task_idx, dtype=np.int32)
 
         else:
+            pr = self.wts / np.sum(self.wts)
             if self.args.naive:
                 learner_task_idx = np.random.choice(self.num_tasks,
                                                     self.args.tasks_per_round,
@@ -122,7 +123,7 @@ class ModelZoo():
                                  seed=self.args.seed)
 
         test_loaders = []
-        for t_id in range(self.num_tasks):
+        for t_id in range(len(l_task_info)):
             test_loaders.append(
                 dataset.get_task_data_loader(t_id, 100, 6, train=tr_flag))
 
