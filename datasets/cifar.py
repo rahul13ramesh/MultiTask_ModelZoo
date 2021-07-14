@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+CIFAR10 and CIFAR100 dataset and dataloader implementations
+"""
 import numpy as np
 import torchvision
 import torchvision.transforms as transforms
@@ -9,14 +13,14 @@ from typing import List
 class Cifar100Handler(MultiTaskDataHandler):
     """
     Load CIFAR100 and prepare dataset. Has ability to add noise to some tasks
-    by modifying the task configuration supplied through the "tasks" argument in
-    __init__
+    by modifying the task configuration supplied through the "tasks"
+    argument in __init__
     """
     def __init__(self,
-                tasks: List[List[int]],
-                samples: int,
-                seed: int = -1,
-                noise: float = 1.0) -> None:
+                 tasks: List[List[int]],
+                 samples: int,
+                 seed: int = -1,
+                 noise: float = 1.0) -> None:
         """
         Download CIFAR100 and prepare requested config of CIFAR100
         Args:
@@ -110,9 +114,9 @@ class Cifar10Handler(MultiTaskDataHandler):
     Load CIFAR10 and prepare dataset
     """
     def __init__(self,
-                tasks: List[List[int]],
-                samples: int,
-                seed: int = -1) -> None:
+                 tasks: List[List[int]],
+                 samples: int,
+                 seed: int = -1) -> None:
         """
         Download dataset and define transforms
         Args:

@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+Helper function to initialize a neural network
+"""
 import torch
 from net.wideresnet import WideResNetMultiTask
 from typing import Any

@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+"""
+Script for hyperparameter tuning using Ray-tune
+"""
 import argparse
-import yaml
 import random
 
 import numpy as np
@@ -15,7 +18,6 @@ from ray.tune.suggest.nevergrad import NevergradSearch
 from ray.tune.suggest import ConcurrencyLimiter
 from ray import tune
 from ray.tune.schedulers import ASHAScheduler
-from datetime import datetime
 
 from net.build_net import fetch_net
 from datasets.build_dataset import fetch_dataclass
@@ -25,6 +27,14 @@ from utils.run_net import evaluate, run_epoch
 
 
 def tune_net(args, dataset_conf):
+    """
+    Function for tuning the hyper-parameters
+
+    params:
+      - args:         Argparse arguments
+      - dataset_conf: JSON Dataset configuration
+
+    """
     config = {
         "batch": tune.choice([8, 16, 32, 128]),
         "lr": tune.loguniform(1e-4, 1e-1),
@@ -108,7 +118,6 @@ def train_model(config, args, dataset_conf, ftune, seed):
     net = fetch_net(args, num_tasks, num_classes, dropout)
 
     # Get dataset
-
     dataclass = fetch_dataclass(dataset_conf["dataset"])
     dataset = dataclass(tasks_info, args.samples, seed=seed)
     train_loader = dataset.get_data_loader(batch_size, 4, train=True)
@@ -138,6 +147,7 @@ def train_model(config, args, dataset_conf, ftune, seed):
     eval_met = logger.log_metrics(net, train_met, -1)
     tune.report(loss=eval_met[1], accuracy=eval_met[0], epoch=0)
 
+    # Tune hyper-parameters
     for epoch in range(args.epochs):
         train_met = run_epoch(net, args, optimizer, train_loader,
                               lr_scheduler, scaler)

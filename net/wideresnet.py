@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Implementation of Wide-Resnets for Multi-task learning.
 Adapted from an open-source implementation.
@@ -17,7 +18,8 @@ class BasicBlock(nn.Module):
                  out_planes: int,
                  stride: int,
                  drop_rate: float = 0.0) -> None:
-        super(BasicBlock, self).__init__()
+        nn.Module.__init__(self)
+        # super(BasicBlock, self).__init__()
         self.bn1 = nn.BatchNorm2d(in_planes)
         self.relu1 = nn.ReLU(inplace=True)
         self.conv1 = nn.Conv2d(in_planes, out_planes, kernel_size=3,

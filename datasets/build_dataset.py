@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+Helper function to fetch a dataset
+"""
 from datasets.mnist import SplitMNISTHandler
 from datasets.mnist import RotatedMNISTHandler
 from datasets.mnist import PermutedMNISTHandler

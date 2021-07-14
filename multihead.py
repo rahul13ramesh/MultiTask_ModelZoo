@@ -1,8 +1,12 @@
+#!/usr/bin/env python3
+"""
+Implementation of the Multihead learner, which is synonymous with
+multi-task learning. The setup is identical to the problem outlined by Baxter
+(https://arxiv.org/abs/1106.0245).
+"""
 import argparse
-
 import numpy as np
 import torch
-
 import torch.optim as optim
 import torch.cuda.amp as amp
 
@@ -14,7 +18,18 @@ from utils.run_net import evaluate, run_epoch
 
 
 class MultiHead():
+    """
+    Object for initializing and training a multihead learner
+    """
     def __init__(self, args, hp, data_conf):
+        """
+        Initialize multihead learner
+
+        Params:
+          - args:      Arguments from arg parse
+          - hp:        JSON config file for hyper-parameters
+          - data_conf: JSON config of dataset
+        """
         self.args = args
         self.hp = hp
 
@@ -56,6 +71,12 @@ class MultiHead():
             self.optimizer, args.epochs * len(self.train_loader))
 
     def train(self, log_interval=5):
+        """
+        Train the multi-task learner
+
+        Params:
+          - log_interval: frequency with which test-set is evaluated
+        """
         # Evaluate before start of training:
         train_met = evaluate(self.net, self.train_loader, self.args.gpu)
         self.logger.log_metrics(self.net, train_met, -1)
