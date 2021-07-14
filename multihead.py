@@ -108,7 +108,7 @@ def main():
                         help="Multi-task config")
     parser.add_argument("--samples", type=int,
                         default=100,
-                        help="Number of samples from each label")
+                        help="Number of samples for each label")
 
     # Hyper-parameters
     parser.add_argument("--hp_config", type=str,

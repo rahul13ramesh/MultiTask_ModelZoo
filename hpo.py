@@ -165,7 +165,7 @@ def main():
                         help="Multi-task config")
     parser.add_argument("--samples", type=int,
                         default=100,
-                        help="Number of samples from each label")
+                        help="Number of samples for each label")
 
     parser.add_argument("--hp_config", type=str,
                         default="./config/hyperparam/default.yaml",
