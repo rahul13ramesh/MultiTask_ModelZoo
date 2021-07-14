@@ -4,8 +4,8 @@ Implementation of [Boosting a Model Zoo for Multi-Task and Continual Learning](h
 Using a single shared backbone (multihead) is a ubiquitous approach to multi-task learning
 and is an implicit design choice in areas like continual and meta-learning. The
 below figure (right) shows that using such a learner on 20 tasks constructed from CIFAR100
-does not lead to monotonic improvements in performance across all tasks. The
-reason for the same can be attributed to the *dissonance amongst the tasks* as
+does not lead to monotonic improvements in performance across all tasks as we increase the number of tasks.
+The reason for the same can be attributed to the *dissonance amongst the tasks* as
 a result of limited capacity of the neural network.
 
 Model Zoo  explicitly addresses the same by increasing the
