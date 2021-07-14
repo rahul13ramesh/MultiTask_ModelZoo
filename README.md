@@ -30,7 +30,7 @@ exhibit forward and backward transfer as show in the figure below (right).
 
 ## Setup:
 
-To install a working environment run:
+To install a working environment:
 ```
 conda env create -f env.yaml
 ```
@@ -38,7 +38,8 @@ conda env create -f env.yaml
 ## Usage
 
 The two key executable files are `modelzoo.py` and `multihead.py`. The `-h`
-flag can be used to list the argparse arguments. For example to run Multihead and Model Zoo, execute:
+flag can be used to list the commandline arguments.
+For example, to run the Multihead and Model Zoo models, execute:
 
 ```
 python multihead.py --data_config ./config/dataset/coarse_cifar100.yaml \
@@ -52,7 +53,9 @@ python modelzoo.py --data_config ./config/dataset/coarse_cifar100.yaml \
                    --samples 100
 ```
 
-To run the continual learning variant of the Model Zoo, add the `--continual` flag. The tasks are presented sequentially with the order prescribed by the data config file.
+To run the continual learning variant of the Model Zoo, add the `--continual` flag.
+The tasks are presented sequentially, with the order prescribed by the ordering in the 
+data config file.
 
 ## Directory Structure
 
