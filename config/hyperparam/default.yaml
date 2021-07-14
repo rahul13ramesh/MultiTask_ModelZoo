@@ -1,3 +1,4 @@
+# Hyper-parmeters obtained from Ray-tune script
 model: "wrn16_4"
 epochs: 200
 batch: 16

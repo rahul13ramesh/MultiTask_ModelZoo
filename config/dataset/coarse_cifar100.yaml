@@ -1,3 +1,5 @@
+# Coarse CIFAR100 with super clasess from 
+# https://www.cs.toronto.edu/~kriz/cifar.html
 dataset: "cifar100"
 tasks: [[4, 30, 55, 72, 95], [1, 32, 67, 73, 91],
         [54, 62, 70, 82, 92], [9, 10, 16, 28, 61],
