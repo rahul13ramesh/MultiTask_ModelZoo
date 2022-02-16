@@ -1,3 +1,6 @@
+
+**Note: This repository has been archivied and has been moved to https://github.com/rahul13ramesh/modelzoo_continual**
+
 # Model Zoo for Multi-Task and Continual Learning
 Implementation of [Boosting a Model Zoo for Multi-Task and Continual Learning](https://arxiv.org/abs/2106.03027)
 
